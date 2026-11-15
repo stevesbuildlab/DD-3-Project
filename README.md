@@ -6,6 +6,12 @@ Bring a 3D-printed **DD-3 Star Wars Droid** to life using an **ESP32-C3 Super Mi
 * **Starter Code:** [`basic.ino`](basic.ino)
 * **Student Handout:** [`STUDENT_LAB_SHEET.md`](STUDENT_LAB_SHEET.md)
 * **Instructor Key:** [`TEACHER_ANSWER_KEY.md`](TEACHER_ANSWER_KEY.md)
+* ### Optional Advanced Extensions (`advanced/` Folder)
+For students who finish early or want to explore deeper programming concepts using the exact same wiring:
+* **[`advanced/1_serial_debug.ino`](advanced/1_serial_debug.ino)** — Prints live angle and pause duration readouts to the Arduino Serial Monitor.
+* **[`advanced/2_smooth_movement.ino`](advanced/2_smooth_movement.ino)** — Uses `for` loops to step 1 degree at a time so students can adjust head-turning speed.
+* **[`advanced/3_random_behavior.ino`](advanced/3_random_behavior.ino)** — Uses `if / else` probability logic to randomize direction order and trigger occasional "double-takes."
+
 
 ---
 
