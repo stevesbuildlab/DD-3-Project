@@ -25,19 +25,21 @@ Bring a 3D-printed **DD-3 Star Wars Droid** to life using an **ESP32-C3 Super Mi
 > **ALWAYS turn the power switch OFF (or unplug the 3.7V battery) before plugging a USB-C cable into your computer.** On the ESP32-C3 Super Mini, the `5V` pin connects straight to the USB-C 5V line without a protection diode. Plugging in USB while the battery is connected will backfeed power into the lithium battery.
 
 ```text
-   [ 3.7V LITHIUM BATTERY ]                  [ ESP32-C3 SUPER MINI ]
-   ========================                  =======================
-   (+) Red Wire ----[ POWER SWITCH ]----+---> [ 5V ]  (Power Input)
-   (-) Black Wire ----------------------+---> [ GND ] (Ground)
-                                        |
-                                        |    [ GPIO 0 ] <---+
+[ 3.7V BATTERY ]                                       [ ESP32-C3 SUPER MINI ]
+================                                       =======================
+ (+) Red ----[ SWITCH ]----+--------------------------> [ 5V ]
+                           |
+                           |   [ SG90 SERVO ]
+                           |   ==============
+                           +-> (Red) Power
 
-                                        |                   |
-   [ SG90 MICRO SERVO ]                 |                   |
-   ====================                 |                   |
-   Red Wire (Power) --------------------+                   |
-   Brown/Black Wire (Ground) -----------+                   |
-   Orange/Yellow Wire (Signal) -----------------------------+
+
+ (-) Black ----------------+--------------------------> [ GND ]
+                           |
+                           +-> (Brown/Black) Ground
+
+
+                               (Orange/Yellow) Signal -> [ GPIO 0 ]
 ```
 
 ### Pinout Table
