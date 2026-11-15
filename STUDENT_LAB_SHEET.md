@@ -92,3 +92,24 @@ Invent your own mood for DD-3 (examples: *Sleepy*, *Curious*, *Suspicious*, or *
 2. **In Arduino code, how many milliseconds equal 2.5 seconds?** ______________ ms
 3. **What happens if you connect the SG90 servo's orange signal wire to Pin 4 instead of Pin 0, without changing the code?**
    _________________________________________________________________________
+
+---
+
+## 6. Bonus Extensions (For Fast Finishers)
+Open the **`advanced/`** folder in [stevesbuildlab/DD-3-Project](https://github.com) and try one or more of these upgrades using the exact same wiring!
+
+### Extension A: Live Data Readout (`1_serial_debug.ino`)
+1. Upload **`1_serial_debug.ino`**, keep your USB-C cable plugged in (battery switch OFF), and open **Tools > Serial Monitor** (`115200` baud).
+2. **Observation:** Write down two consecutive angle and pause time readings printed on your screen:
+   * Move 1: Angle = _______° | Hold Time = _______ sec
+   * Move 2: Angle = _______° | Hold Time = _______ sec
+
+### Extension B: Speed Control (`2_smooth_movement.ino`)
+1. Upload **`2_smooth_movement.ino`** and test how changing **`STEP_DELAY_MS`** affects DD-3's head turn speed.
+2. **Question:** Does *increasing* `STEP_DELAY_MS` from `15` to `40` make the droid's head turn **faster** or **slower**? Why?
+   _________________________________________________________________________
+
+### Extension C: Unpredictable "Double-Takes" (`3_random_behavior.ino`)
+1. Upload **`3_random_behavior.ino`** and watch how DD-3 occasionally glances toward center and snaps back to check something twice.
+2. **Experiment:** Change **`DOUBLE_TAKE_CHANCE`** from `25` to `80` (an 80% chance). How does the droid's behavior change?
+   _________________________________________________________________________
