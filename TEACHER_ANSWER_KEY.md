@@ -26,3 +26,10 @@
 * **Board resets every time the servo moves:** The 3.7V lithium battery voltage is dipping below ~3.3V when the servo motor starts up (brownout reset). Recharge the battery, or solder a **100µF–470µF electrolytic capacitor** across the `5V` and `GND` pins to absorb motor current spikes.
 * **Board will not upload code:** Make sure the battery switch is OFF, hold down the **BOOT** button on the ESP32-C3 while plugging in USB (or press **BOOT**, tap **RST**, then release **BOOT**), and try uploading again.
 * **Head is crooked when powered on:** Upload the code first so the servo snaps to `90°`, unplug power, remove the servo horn, align the head straight forward, and press the horn back onto the gear.
+
+---
+
+## Bonus Extensions Answer Key
+* **Extension A (`1_serial_debug.ino`):** Students should record two distinct angle/time lines (e.g., `Angle: 90 deg | Holding for: 3.12 sec` followed by `Angle: 44 deg | Holding for: 1.85 sec`). *(Note: If nothing appears in Serial Monitor, verify **Tools > USB CDC On Boot** is set to **Enabled**.)*
+* **Extension B (`2_smooth_movement.ino`):** Increasing `STEP_DELAY_MS` makes the head turn **slower** because the `for` loop pauses for a longer number of milliseconds between every single 1-degree step.
+* **Extension C (`3_random_behavior.ino`):** Setting `DOUBLE_TAKE_CHANCE = 80` causes DD-3 to perform a rapid double-take almost every time it looks left or right (8 out of 10 times on average), making it look hyper-alert or startled.
